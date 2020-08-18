@@ -1,0 +1,13 @@
+{% for key,value in d.items %}
+    {{key}}
+    {{ value }}
+
+{% endfor %}
+{{d.one}}
+<p id = "result" onclick="demof(this)">ok</p>
+<script>
+    var i = 0;
+    function demof(obj){
+        obj.innerHTML ="{{d.one}}";
+    }
+</script>
