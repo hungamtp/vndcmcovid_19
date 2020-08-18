@@ -48,7 +48,6 @@ def index(request):
             recovery   += int(word1[6])          
             death += int(word1[7])
     driver.quit()
-    string ='Hà Nội'
     context={
         # 'string':string,
         'table' :table,
@@ -56,7 +55,6 @@ def index(request):
         'in_therapy': in_therapy, 
         'recovery' :recovery ,       
         'death': death ,
-        'string':string,
     }
     return render(request , 'home.html' , context)
 

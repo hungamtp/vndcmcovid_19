@@ -175,7 +175,8 @@
        </svg>
        <script>
             function get_data(obj){
-                document.getElementById("city_name").innerHTML = obj.getAttribute("name");
+                city_name = obj.getAttribute("name")
+                document.getElementById("city_name").innerHTML = city_name;
             }
        </script> 
 </body>
