@@ -18,10 +18,10 @@ def index(request):
     finally:
         driver.close()
     table = dict()
-    infection =0
-    death = 0
-    in_therapy = 0
-    recovery =0
+    case =0
+    deaths = 0
+    treating = 0
+    recovered =0
     for line in provinces.splitlines():
         line = line.replace('-' , '')
         line = line.replace('  ' , ' ')
@@ -30,31 +30,31 @@ def index(request):
         word1 = line.split(' ')
         if word1[2].isnumeric():
             table[word1[0] + ' ' +word1[1]] = [word1[2] , word1[3] , word1[4] , word[5]]
-            infection += int(word1[2])
-            in_therapy += int(word1[3])
-            recovery   += int(word1[4])          
-            death += int(word1[5])
+            case += int(word1[2])
+            treating += int(word1[3])
+            recovered   += int(word1[4])          
+            deaths += int(word1[5])
         elif word1[3].isnumeric() and not word1[2].isnumeric():
             table[word1[0] + ' ' +word1[1] + ' ' + word1[2]] = [word1[3] , word1[4] , word1[5] , word[6]]       
-            infection += int(word1[3])
-            in_therapy += int(word1[4])
-            recovery   += int(word1[5])          
-            death += int(word1[6])
+            case += int(word1[3])
+            treating += int(word1[4])
+            recovered   += int(word1[5])          
+            deaths += int(word1[6])
         else:
 
             table[word1[0] + ' ' +word1[1] + ' ' + word1[2] +' ' +word1[3]] = [ word1[4] , word1[5] , word1[6] , word[7] ]
-            infection += int(word1[4])
-            in_therapy += int(word1[5])
-            recovery   += int(word1[6])          
-            death += int(word1[7])
+            case += int(word1[4])
+            treating += int(word1[5])
+            recovered   += int(word1[6])          
+            deaths += int(word1[7])
     driver.quit()
     context={
         # 'string':string,
         'table' :table,
-        'infection' :infection ,
-        'in_therapy': in_therapy, 
-        'recovery' :recovery ,       
-        'death': death ,
+        'case' :case ,
+        'treating': treating, 
+        'recovered' :recovered ,       
+        'deaths': deaths ,
     }
     return render(request , 'home.html' , context)
 

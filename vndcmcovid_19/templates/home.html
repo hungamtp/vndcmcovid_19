@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VNDCMcovid_19</title>
     <style>
+        body{
+            font-family: serif;
+        }
         #map{
             fill:white;
+        }
+        #country_name{
+            font-weight: 700;
+            font-size: large;
         }
         path:hover{
             opacity: 70%;
@@ -19,17 +26,25 @@
             border-bottom: 1px solid black;
         }
         li{
-            padding:25px
+            margin: 10px;
         }
+
     </style>
 </head>
 <body>
     <ul>
-        <li id = "city_name">Province:Thua thien hue</li>
-        <li>Infection:{{infection}}</li>
-        <li>In therapy:{{in_therapy}}</li>
-        <li>Recovery:{{recovery}}</li>
-        <li>Death:{{death}}</li>
+        <li id="country_name">Việt Nam</li>
+        <li>Case : {{case}}</li>
+        <li>Treating : {{treating}}</li>
+        <li>Recovered : {{recovered}}</li>
+        <li>Deaths : {{deaths}}</li>
+        <li>|</li>
+        <li id = "city_name"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+
     </ul>
     <h1 id ="result"></h1>
     <!-- {% for key , value in table.items %}
@@ -173,10 +188,11 @@
         <circle cx="471.2" cy="1863.5" id="2">
         </circle>
        </svg>
+       <!-- {{table}} -->
        <script>
             function get_data(obj){
                 city_name = obj.getAttribute("name")
-                document.getElementById("city_name").innerHTML = city_name;
+                document.getElementById("city_name").innerHTML = "{{table.city_name}}";
             }
        </script> 
 </body>

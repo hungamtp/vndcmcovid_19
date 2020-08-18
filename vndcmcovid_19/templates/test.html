@@ -8,6 +8,10 @@
 <script>
     var i = 0;
     function demof(obj){
-        obj.innerHTML ="{{d.one}}";
+        string1 = "\"{{d.";
+        string2 ="one";
+        string3 ="}}\"";
+        var last = string1.concat(string2).concat(string3);
+        obj.innerHTML = "{{d.one}}";
     }
 </script>
