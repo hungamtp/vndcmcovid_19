@@ -23,6 +23,7 @@
         }
     </style>
 </head>
+<body>
     <ul>
         <li id = "city_name">Province:Thua thien hue</li>
         <li>Infection:{{infection}}</li>
@@ -31,7 +32,6 @@
         <li>Death:{{death}}</li>
     </ul>
     <h1 id ="result"></h1>
-    <span>infection{{infection}}.recovery{{recovery}}.death{{death}}.in_therapy{{in_therapy}}</span>
     <!-- {% for key , value in table.items %}
 
             <div>{{key}}</div>
@@ -175,8 +175,7 @@
        </svg>
        <script>
             function get_data(obj){
-
-                document.getElementById("result").innerHTML = obj.getAttribute("name");
+                document.getElementById("city_name").innerHTML = obj.getAttribute("name");
             }
        </script> 
 </body>
