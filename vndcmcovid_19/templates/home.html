@@ -13,8 +13,23 @@
             transform: 2s;
             fill : yellow;
         }
+        ul{
+            display: flex;
+            list-style: none;
+            border-bottom: 1px solid black;
+        }
+        li{
+            padding:25px
+        }
     </style>
 </head>
+    <ul>
+        <li id = "city_name">Province:Thua thien hue</li>
+        <li>Infection:{{infection}}</li>
+        <li>In therapy:{{in_therapy}}</li>
+        <li>Recovery:{{recovery}}</li>
+        <li>Death:{{death}}</li>
+    </ul>
     <h1 id ="result"></h1>
     <span>infection{{infection}}.recovery{{recovery}}.death{{death}}.in_therapy{{in_therapy}}</span>
     <!-- {% for key , value in table.items %}
@@ -160,9 +175,7 @@
        </svg>
        <script>
             function get_data(obj){
-                <!-- name_city = obj.getAttribute("name");
-                list = table.name_city;
-                document.getElementById("result").innerHTML = "list[1]"; -->
+
                 document.getElementById("result").innerHTML = obj.getAttribute("name");
             }
        </script> 
