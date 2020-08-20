@@ -56,10 +56,3 @@ def index(request):
     }
     return render(request , 'home.html' , context)
 
-def test(request):
-    d = {'one':'itemone', 'two':'itemtwo', 'three':'itemthree'}
-
-    context={
-        'd': d,
-    }
-    return render(request  , 'test.html' , context)
