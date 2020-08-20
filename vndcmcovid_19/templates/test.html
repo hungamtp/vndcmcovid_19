@@ -1,16 +1,18 @@
-<!-- {% for key,value in d.items %}
-    {{key}}
-    {{ value }}
+<!DOCTYPE html>
+<html>
+<body>
 
-{% endfor %} -->
+<div id ="name">hung</div>
 
-<p></p>{{ d.one }}
-<p id = "result" onclick="demof(this)">ok</p>
+<p id="demo"></p>
+
 <script>
-    var i = 0;
-    function demof(obj){
-        string ="{{d.one}}";
-        console.log(string);
-        obj.innerHTML = "{{d.one}}";
-    }
+    string = "name";
+    var myElement = document.getElementById(string);
+    document.getElementById("demo").innerHTML = 
+    "The text from the intro paragraph is " + myElement.innerHTML;
 </script>
+
+</body>
+</html>
+

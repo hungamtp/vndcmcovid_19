@@ -1,4 +1,10 @@
-{{table.Ha_Noi}}
+
+<select id = "hide">
+    {% for key , value in table.items %}
+        <option id="{{key}}"> {{value.1}}</div></option>
+    {% endfor %}
+</select>
+
         <div id = "city_name" onclick ="demof(this)" >Click</div>
         <div id ="case" ></div>
         <div id = "treating" ></div>
@@ -6,7 +12,11 @@
         <div id = "deaths" ></div>
 <script>
     function demof(obj){
-        table = "{{table}}";
-        console.log(table.Ha_Noi);
+        var list = "{{table}}";
+        console.log(list);
+        string = document.getElementsByTagName("div");
+        string = string.replace("&#x27;","");
+        console.log(string);
+        <!-- console.log(document.getElementsByTagName("div")); -->
     }
 </script>
