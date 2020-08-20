@@ -1,17 +1,16 @@
-{% for key,value in d.items %}
+<!-- {% for key,value in d.items %}
     {{key}}
     {{ value }}
 
-{% endfor %}
-{{d.one}}
+{% endfor %} -->
+
+<p></p>{{ d.one }}
 <p id = "result" onclick="demof(this)">ok</p>
 <script>
     var i = 0;
     function demof(obj){
-        string1 = "\"{{d.";
-        string2 ="one";
-        string3 ="}}\"";
-        var last = string1.concat(string2).concat(string3);
+        string ="{{d.one}}";
+        console.log(string);
         obj.innerHTML = "{{d.one}}";
     }
 </script>
