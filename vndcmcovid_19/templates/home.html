@@ -13,12 +13,11 @@
             margin-top: 50px;
         }
         #country_name{
-            font-weight: 700;
-            font-size: large;
+            font-weight: 1000;
+            font-size: 20px;
         }
         path:hover{
             opacity: 70%;
-            transform: 2s;
             fill : yellow;
         }
         .navbar{
@@ -32,12 +31,15 @@
             top: 0;
             width: 100%;
         }
+        a{
+            text-decoration: none;
+        }
         li{
             margin: 10px;
         }
         main{
             display: flex;
-            
+            font-size: 25px;
         }
         #information{
             margin-top: 50px ;
@@ -50,7 +52,7 @@
 </head>
 <body>
     <ul class="navbar">
-        <li id="country_name">Viet Nam</li>
+        <li id="country_name">Việt Nam</li>
         <li>Case : {{case}}</li>
         <li>Treating : {{treating}}</li>
         <li>Recovered : {{recovered}}</li>
@@ -209,8 +211,10 @@
             </circle>
         </svg>
         <ul id="information">
-            <li>Realtime monitoring , data is scrapped from <a href="https://ncov.moh.gov.vn/?fbclid=IwAR3oJOySbACRnzQSSef0SYWh3-O03ZsnT_Dlkgn2u5pa08ThABYm5kec8u0">goverment site</a></li>
-            <li></li>
+            <li>Việt Nam is 1<sup>st</sup>.</li>
+            <li>Realtime monitoring , data is scrapped from <a href="https://ncov.moh.gov.vn/">goverment site</a>(come there for more information).</li>
+            <li>Thanks everybody who is sacrificing for Viet Nam.</li>
+            <li id = "quote"><b>Be strong and stay safe ,Việt Nam.</b></li>
         </ul>
     </main>    
         <script>
