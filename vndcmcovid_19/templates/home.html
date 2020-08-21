@@ -222,10 +222,10 @@
                 city_name = obj.getAttribute("name");
                 var data = document.getElementById(city_name);
                 if (data == null){
-                    document.getElementById("case").innerHTML = 0;
-                    document.getElementById("treating").innerHTML = 0;
-                    document.getElementById("recovered").innerHTML = 0;
-                    document.getElementById("deaths").innerHTML = 0;
+                    document.getElementById("case").innerHTML = "Case: "+0;
+                    document.getElementById("treating").innerHTML = "Treating: "+0;
+                    document.getElementById("recovered").innerHTML = "Recovered: "+0;
+                    document.getElementById("deaths").innerHTML = "Deaths: "+ 0;
                 }
                 else{
                     c_t_r_d = data.innerHTML.split(".");
